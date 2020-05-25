@@ -1,1 +1,71 @@
-/Users/sam/Library/Application Support/Code/User/settings.json
+{
+    "window.zoomLevel": 0,
+    "editor.wordWrap": "on",
+    "[plaintext]": {},
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.iconTheme": "Monokai Classic Icons",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "/node_modules": true,
+        "/node_modules/": true
+    },
+    "window.newWindowDimensions": "maximized",
+    "editor.formatOnSave": true,
+    "files.autoSaveDelay": 2000,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        }
+    ],
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "vim.disableExtension": false,
+    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.cycle": false,
+    "editor.tabCompletion": true,
+    "typescript.quickSuggestionsForPaths": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "html.suggest.html5": false,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreview": true,
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4
+    }
+}

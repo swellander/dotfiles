@@ -2,7 +2,7 @@ export ZSH="/Users/sam/.oh-my-zsh"
 
 PATH=$PATH:$HOME/bin
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME="random" # I like the jnrowe theme
+ZSH_THEME="random" # I like jnrowe, jonathan
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -15,6 +15,9 @@ source $ZSH/oh-my-zsh.sh
 alias gs="git status"
 alias add="git add"
 alias diff="git diff"
+alias co="git checkout"
+alias pull="git pull"
+alias push="git push"
 
 # navigation
 alias dev="cd /Users/sam/dev"

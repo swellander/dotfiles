@@ -30,9 +30,14 @@ alias push="git push"
 # navigation
 alias dev="cd /Users/sam/dev"
 alias sand="cd ~/sand"
+alias dot="cd ~/Dev/dotfiles"
 
 # virtualenv
 alias activate="source venv/bin/activate"
 
 # misc.
 alias refresh="source /Users/sam/.zshrc"
+
+# Django
+alias pm="python manage.py"
+alias ppm="python project/manage.py"

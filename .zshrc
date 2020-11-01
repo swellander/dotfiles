@@ -1,8 +1,16 @@
 export ZSH="/Users/sam/.oh-my-zsh"
 
+# Load pyenv automatically by adding
+# the following to ~/.bashrc:
+
+PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
 PATH=$PATH:$HOME/bin
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME="random" # I like jnrowe, jonathan
+ZSH_THEME="jnrowe" # I like jnrowe, jonathan
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"

@@ -1,11 +1,8 @@
 export ZSH="/Users/sam/.oh-my-zsh"
 
-# Load pyenv automatically by adding
-# the following to ~/.bashrc:
-
-# PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 
 PATH=$PATH:$HOME/bin

@@ -25,6 +25,7 @@ alias pull="git pull"
 alias push="git push"
 alias prune-r="git remote prune origin"
 alias prune-l="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
+alias save="cz"
 
 # navigation
 alias dev="cd /Users/sam/dev"

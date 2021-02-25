@@ -12,4 +12,5 @@ for filename in os.listdir(os.path.dirname(__file__)):
     source = os.path.join(os.path.abspath(os.path.dirname(__file__)), filename)
     dest = os.path.join('~', filename)
     os.symlink(src, dest)
-    print(f'Linking {source} => {dest')
+    print(f'Linking {source} => {dest}')
+

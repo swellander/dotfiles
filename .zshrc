@@ -26,6 +26,8 @@ alias push="git push"
 alias prune-r="git remote prune origin"
 alias prune-l="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
 alias save="cz"
+alias stash="git add . && git commit -n -m 'TEMP'"
+alias unstash="git reset head^"
 
 # navigation
 alias dev="cd /Users/sam/dev"
@@ -37,6 +39,7 @@ alias activate="source venv/bin/activate"
 
 # misc.
 alias refresh="source /Users/sam/.zshrc"
+alias startpg="pg_ctl -D /usr/local/var/postgres start"
 
 # Django
 alias pm="python manage.py"

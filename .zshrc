@@ -1,9 +1,11 @@
 export ZSH="/Users/sam/.oh-my-zsh"
 
-PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
+# virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/Library/Frameworks/Python.framework/Versions/3.10/bin/virtualenv
+source /Library/Frameworks/Python.framework/Versions/3.10/bin/virtualenvwrapper.sh
 
 PATH=$PATH:$HOME/bin
 ZSH_DISABLE_COMPFIX=true
@@ -25,26 +27,32 @@ alias pull="git pull"
 alias push="git push"
 alias prune-r="git remote prune origin"
 alias prune-l="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
-alias save="cz"
+alias save="git commit"
 alias stash="git add . && git commit -n -m 'TEMP'"
 alias unstash="git reset head^"
 
 # navigation
 alias dev="cd /Users/sam/dev"
 alias sand="cd ~/sand"
-alias dot="cd ~/Dev/dotfiles"
+alias dot="cd ~/dotfiles"
 
 # virtualenv
 alias activate="source venv/bin/activate"
 
 # misc.
 alias refresh="source /Users/sam/.zshrc"
-alias startpg="pg_ctl -D /usr/local/var/postgres start"
+# alias start_pg="/opt/homebrew/opt/postgresql/bin/postgres -D /opt/homebrew/var/postgres"
+alias start_pg="pg_ctl -D /usr/local/var/postgres start"
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias ppjson='python -m json.tool'
 
 # Django
 alias pm="python manage.py"
 alias ppm="python project/manage.py"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

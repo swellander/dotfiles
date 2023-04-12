@@ -9,7 +9,7 @@ source /Library/Frameworks/Python.framework/Versions/3.10/bin/virtualenvwrapper.
 
 PATH=$PATH:$HOME/bin
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME="jnrowe" # I like jnrowe, jonathan
+ZSH_THEME="jonathan" # I like jnrowe, jonathan
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -29,7 +29,7 @@ alias prune-r="git remote prune origin"
 alias prune-l="git branch --merged | egrep -v '(^\*|master|dev|develop)' | xargs git branch -d"
 alias save="git commit"
 alias stash="git add . && git commit -n -m 'TEMP'"
-alias unstash="git reset head^"
+alias unstash="git reset HEAD~"
 
 # navigation
 alias dev="cd /Users/sam/dev"
@@ -42,7 +42,8 @@ alias activate="source venv/bin/activate"
 # misc.
 alias refresh="source /Users/sam/.zshrc"
 # alias start_pg="/opt/homebrew/opt/postgresql/bin/postgres -D /opt/homebrew/var/postgres"
-alias start_pg="pg_ctl -D /usr/local/var/postgres start"
+# alias start_pg="pg_ctl -D /usr/local/var/postgres start"
+alias start_pg="sudo brew services start postgresql"
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias ppjson='python -m json.tool'
 
@@ -56,3 +57,5 @@ export NVM_DIR="$HOME/.nvm"
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+function test() { pytest project -k "$1" -s}
